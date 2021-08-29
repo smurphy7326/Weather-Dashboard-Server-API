@@ -1,0 +1,21 @@
+/* Style Section */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading {
+    background-color: #203354;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+input {
+    width:auto;
+}
+
+#cityListSearch {
+    width: 350px;
+}
+

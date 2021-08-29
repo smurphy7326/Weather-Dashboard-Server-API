@@ -34,6 +34,11 @@
 * Added in the link for the script website that was the same as the link above for the CSS
 * Added some parts to the javascript up top to streamline the code
 
-### Version 1.7 - 
+### Version 1.7 - Links ot Weather
 * Added more links to the website from other APIs to help populated the webpage
+* Added the UV index link
+* Added the forecast link
+* Added the current weather link
+
+### Version 1.8 - 
 * 

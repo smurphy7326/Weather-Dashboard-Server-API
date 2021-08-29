@@ -27,11 +27,18 @@ for (var i =0; i < keys.length; i++) {
 function populateCitiesWeather(city, citySearchList) {
     createCityList(citySearchList);
 
-    // Open Weather Map website help me determine which one to choose form this instance
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?&units=imperial&appid=885e9149105e8901c9809c018ce8658&q=" + city;
+    // Open Weather Map website help me determine which one to choose from this and used my API key
+    // 
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?&units=imperial&appid=93d8043af196220c5f35d380f7c697f4&q=" + city;
+
+    var queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?&units=imperial&appid=93d8043af196220c5f35d380f7c697f4&q=" + city;
+
+    var latitude;
+
+    var longitude;
 
     $.ajax({              // jQuery on Bootstrap
-        url.queryURL,
+        url: queryURL,
         method: "GET"
     })
     // Data is stored
@@ -64,6 +71,14 @@ function populateCitiesWeather(city, citySearchList) {
         $("currentWind").text("Wind Speed: " + weather.wind.spped + "MPH");
 
 
+        latitude = weather.coord.lat;
+        longitude = weather.coord.lon;
+
+        // UV index got help through the website
+        // helped with the format at the end from this week in class
+        var queryURL3 = "https://api.openweathermap.org/data/2.5/uvio/forecast?&units=imperial&appid=93d8043af196220c5f35d380f7c697f4&q=" + "&lat=" + latitude + "&lon=" + longitude;
+
+        
         .then(function(uvIndex) {
             console.log(uvIndex);
         

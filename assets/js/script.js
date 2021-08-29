@@ -55,7 +55,7 @@ function populateCitiesWeather(city, citySearchList) {
         );
 
         var searchedCities = $("<h4>").text(weather.name);
-        $(#"searchedCities").prepend(searchedCities);
+        $("#searchedCities").prepend(searchedCities);
 
         // Ask BCS helped with this part
         var weatherIcon = $("<img>"); // should come from the Bootstrap or font awesome
@@ -78,7 +78,11 @@ function populateCitiesWeather(city, citySearchList) {
         // helped with the format at the end from this week in class
         var queryURL3 = "https://api.openweathermap.org/data/2.5/uvio/forecast?&units=imperial&appid=93d8043af196220c5f35d380f7c697f4&q=" + "&lat=" + latitude + "&lon=" + longitude;
 
-        
+        // When use GET it is from a specified source W3 schools
+        $.ajax({
+            url: queryURL3,
+            method: "GET"
+        })
         .then(function(uvIndex) {
             console.log(uvIndex);
         
@@ -89,6 +93,33 @@ function populateCitiesWeather(city, citySearchList) {
         $("currentUvScale").append.(uvIndexDisplay.text(uvIndex[0].value));
         console.log(uvIndex[0].value);
         
+        $.ajax({
+            url: queryURL2,
+            method: "GET"
+        }).then(function(forecast) {
+            console.log(queryURL2);
+
+            // Friend from home who works with computer helped me with this part
+            console.log(forecast);
+            for (var i = 6; i < forecast.list.length; i +=8) {
+                var forecastDate = ("<h4>");
+                // forecast
+
+                $("#dateForecast" + forecastPosition).empty();
+                $("#dateForecast" + forecastPosition).append(
+                    forecastDate.text(nowMoment.add(1, "days"),format("MM/DD/YYYY"))
+                );
+
+                // Forecast icon from FontAwesome
+                var forecastIcon = $("<img>");
+                forecastIcon.attr(
+                    "src",
+                    "https://openweathermap.org/img/w/" + forecast.list[i].weather[0].icon + ".png"
+                );
+            }
+
+        })
+
         })
 
     })

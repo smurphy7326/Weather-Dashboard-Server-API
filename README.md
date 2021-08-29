@@ -34,11 +34,18 @@
 * Added in the link for the script website that was the same as the link above for the CSS
 * Added some parts to the javascript up top to streamline the code
 
-### Version 1.7 - Links ot Weather
+### Version 1.7 - Links to Weather
 * Added more links to the website from other APIs to help populated the webpage
 * Added the UV index link
 * Added the forecast link
 * Added the current weather link
 
-### Version 1.8 - 
-* 
+### Version 1.8 - Links to Weather
+* Saved the code in VS Code
+*  made sure the links were correct
+
+### Version 1.9 - 
+* Moved around some HTML code for easier Javascript meshing
+* Added smaller header styles to styles.css
+* worked more on the five day forecast
+* Updated the README.md

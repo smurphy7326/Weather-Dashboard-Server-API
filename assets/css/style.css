@@ -31,3 +31,16 @@ input {
     justify-content: center;
 }
 
+#currentWeather {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h4 {
+    margin: 5px;
+}
+
+.forecast {
+    margin: 10px;
+}

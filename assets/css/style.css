@@ -19,3 +19,15 @@ input {
     width: 350px;
 }
 
+#searchedCities {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#currentVariables {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+

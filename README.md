@@ -17,3 +17,9 @@
 * Started the forecast Section in the HTML
 * Adjusted a few variables in the style to make them match up
 
+### Version 1.3 - Javascript
+* Javascript section with the display now part
+* Javascript section with the UV Index
+* Javascript with the temperature, humidity and wind sections
+
+

@@ -10,8 +10,18 @@ for (var i =0; i < keys.length; i++) {
     var cityListEntry = $("button");
     cityListEntry.addClass("list-group-item list-group-item-action"); //W3 schools helped with this one
 
-    var splitStr = key[]
+    var splitStr = keys[i].toLowerCase().split("");
+    for (var i = 0; i < splitStr.length; i++) {
+        splitStr[i] = 
+            splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    var titleCasedCity = splitStr.join("");
+    cityListEntry.text(titleCasedCity);
+
+    $("#citiesSearched").append(cityListEntry);
+  }
 }
+
 
 // Need to make something for the cities
 

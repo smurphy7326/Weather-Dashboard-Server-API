@@ -116,6 +116,21 @@ function populateCitiesWeather(city, citySearchList) {
                     "src",
                     "https://openweathermap.org/img/w/" + forecast.list[i].weather[0].icon + ".png"
                 );
+
+                // Had to work with this to help with the 5 day forecast
+                $("#forecast-icon" + forecastPosition).empty();
+                $("#forecast-icon" + forecastPosition).append(forecastIcon);
+                console.log(forecast.list[i].weather[0].icon);
+
+                $("#tempForecast" + forecastPosition).text(
+                    "Temperature: " + forecast.list[i].main.temp + " ˚F"
+                );
+
+                $("#humidityForecast" + forecastPosition).text(
+                    "Humidity: " + forecast.list[i].main.humidity + "%"
+                );
+
+                
             }
 
         })

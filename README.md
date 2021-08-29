@@ -29,7 +29,11 @@
 ### Version 1.5 - Rest of days
 * Added days 2, 3, 4 and 5 onto the HTML
 
-### Version 1.6 -
+### Version 1.6 - Adding Links
 * Added in the link for script at the bottom of the HMTL
 * Added in the link for the script website that was the same as the link above for the CSS
 * Added some parts to the javascript up top to streamline the code
+
+### Version 1.7 - 
+* Added more links to the website from other APIs to help populated the webpage
+* 

@@ -22,13 +22,13 @@ for (var i =0; i < keys.length; i++) {
   }
 }
 
-
 // Need to make something for the cities
 
 function populateCitiesWeather(city, citySearchList) {
     createCityList(citySearchList);
 
-    var queryURL = "https://openweathermap.org/api/one-call-api"
+    // Open Weather Map website help me determine which one to choose form this instance
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?&units=imperial&appid=885e9149105e8901c9809c018ce8658&q=" + city;
 
     $.ajax({              // jQuery on Bootstrap
         url.queryURL,

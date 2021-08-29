@@ -69,4 +69,20 @@ function populateCitiesWeather(city, citySearchList) {
     })
 }
 
+$(document).ready(function() {
+    var citySearchListString = localStorage.getItem("citySearchList");
+
+    var citySearchList = JSON.parse(citySearchListString);
+
+    if citySearchList == null) {
+        citySearchList = {};
+    }
+
+    createCityList(citySearchList);
+
+    $("#currentWeather").hide();
+
+    
+})
+
 

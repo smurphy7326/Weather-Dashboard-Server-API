@@ -22,4 +22,11 @@
 * Javascript section with the UV Index
 * Javascript with the temperature, humidity and wind sections
 
+### Version 1.4 - First Day
+* Added the first day to the forecast 
+* Added some things in Javascript for the 5 day forecast
+
+### Version 1.5 - Rest of days
+* Added days 2, 3, 4 and 5 onto the HTML
+
 

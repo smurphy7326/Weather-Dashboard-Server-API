@@ -130,14 +130,15 @@ function populateCitiesWeather(city, citySearchList) {
                     "Humidity: " + forecast.list[i].main.humidity + "%"
                 );
 
-                
+                // Maybe have to change this one
+                $(".forecast").attr(
+                    "style",
+                    "background-color: darkblue; color: white"
+                );
             }
-
-        })
-
-        })
-
-    })
+          });
+        });
+     });
 }
 
 $(document).ready(function() {
@@ -152,6 +153,20 @@ $(document).ready(function() {
     createCityList(citySearchList);
 
     $("#currentWeather").hide();
+    $("#fiveDayWeather").hide();
+
+    // Learned about this from MDN Web docs - if it doesn't get handled 
+    // the default action should not be taken as it normally is
+
+    $("submitButton").on("click", function(event) {
+        event.preventDefault();
+        var city = $("#citiesSearched")
+            .val()  // jQuery - returns or sets the value attribute of the selected elements
+            .trim() // removes whitespace from both ends of the trim
+            .toLowerCase(); // returns the calling string value converted to lowercase
+
+            
+    }))
 
     
 })

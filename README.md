@@ -51,4 +51,8 @@
 * Updated the README.md
 
 ### Version 1.10 - 
-* 
+* More on the forecast part of the javascript
+
+### Version 1.11 - 
+* Added to the javascript with the submit button
+* Added the HTML with jQuery at the bottom of the webpage

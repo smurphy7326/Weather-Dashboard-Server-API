@@ -50,9 +50,15 @@
 * worked more on the five day forecast
 * Updated the README.md
 
-### Version 1.10 - 
+### Version 1.10 - More 5 Day
 * More on the forecast part of the javascript
 
-### Version 1.11 - 
+### Version 1.11 - Submit
 * Added to the javascript with the submit button
 * Added the HTML with jQuery at the bottom of the webpage
+
+### Version 1.12 - Header 5
+* Added style for header 5
+* Changed the header to a smaller one in HTML
+* Added some things to javascript to help the weather come up
+* Updated the README.md

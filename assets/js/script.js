@@ -165,9 +165,23 @@ $(document).ready(function() {
             .trim() // removes whitespace from both ends of the trim
             .toLowerCase(); // returns the calling string value converted to lowercase
 
-            
-    }))
+            if (city != "") {
+                citySearchList[city] = true;
+                localStorage.setItem("citySearchList", JSON.stringify(citySearchList)); // JSON.stringify converts the javascript object into a JSON string
 
+                populateCityWeather(city,citySearchList);
+
+                $("#currentWeather").show();
+                $("#fiveDayWeather").show();
+                }
+            });
+
+            $("#cityListSearch").on("click", "button", function(event) {
+                event.preventDeafualt();
+                var city = $(this).text();
+                
+                
+            })
     
 })
 

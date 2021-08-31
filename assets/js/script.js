@@ -2,12 +2,11 @@
 
 function createCityList(citySearchList) {
     $("#cityListSearch").empty();
-}
 
 // keys var AskBCS
 var keys = Object.keys(citySearchList);
-for (var i =0; i < keys.length; i++) {
-    var cityListEntry = $("button");
+for (var i = 0; i < keys.length; i++) {
+    var cityListEntry = $("<button>");
     cityListEntry.addClass("list-group-item list-group-item-action"); //W3 schools helped with this one
 
     var splitStr = keys[i].toLowerCase().split("");
@@ -16,9 +15,9 @@ for (var i =0; i < keys.length; i++) {
             splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
     }
     var titleCasedCity = splitStr.join("");
-    cityListEntry.text(titleCasedCity);
+    cityListEntry.text(titleCasedCity); // Capitalize a City
 
-    $("#citiesSearched").append(cityListEntry);
+    $("#citiesSearched").append(cityListEntry); // city list entry is to show what cities were entered
   }
 }
 
@@ -41,6 +40,7 @@ function populateCitiesWeather(city, citySearchList) {
         url: queryURL,
         method: "GET"
     })
+
     // Data is stored
     .then(function(weather) {
         console.log(queryURL);
@@ -51,7 +51,7 @@ function populateCitiesWeather(city, citySearchList) {
         var displayMoment = $("<h4>");
         $("#searchedCities").empty();
         $("#searchedCities").append(
-            displayMoment.text("(" + nowMoment.format("MM/DD/YYYY") + ")")
+            displayMoment.text("(" + nowMoment.format("M/D/YYYY") + ")")
         );
 
         var searchedCities = $("<h4>").text(weather.name);
@@ -59,14 +59,14 @@ function populateCitiesWeather(city, citySearchList) {
 
         // Ask BCS helped with this part
         var weatherIcon = $("<img>"); // should come from the Bootstrap or font awesome
-        weatherIcon.attr()
+        weatherIcon.attr(
         "src",
         "http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png" // help with AskBCS
-    );
+        );
         $("currentVariables").empty();
         $("currentVariables").append(weatherIcon);
 
-        $("currentTemperature").text("Temperature" +weather.main.temp + " ˚F");
+        $("currentTemperature").text("Temperature" + weather.main.temp + " ˚F");
         $("currentHumidity").text("Humidity: " + weather.main.humidity + "%");
         $("currentWind").text("Wind Speed: " + weather.wind.spped + "MPH");
 
@@ -76,7 +76,7 @@ function populateCitiesWeather(city, citySearchList) {
 
         // UV index got help through the website
         // helped with the format at the end from this week in class
-        var queryURL3 = "https://api.openweathermap.org/data/2.5/uvio/forecast?&units=imperial&appid=93d8043af196220c5f35d380f7c697f4&q=" + "&lat=" + latitude + "&lon=" + longitude;
+        var queryURL3 = "https://api.openweathermap.org/data/2.5/uvi/forecast?&units=imperial&appid=93d8043af196220c5f35d380f7c697f4&q=" + "&lat=" + latitude + "&lon=" + longitude;
 
         // When use GET it is from a specified source W3 schools
         $.ajax({
@@ -90,7 +90,7 @@ function populateCitiesWeather(city, citySearchList) {
         var uvIndexDisplay = $("<button>");
         uvIndexDisplay.addClass("btn btn-danger");
         $("currentUvScale").text("UV Index: ");
-        $("currentUvScale").append.(uvIndexDisplay.text(uvIndex[0].value));
+        $("currentUvScale").append(uvIndexDisplay.text(uvIndex[0].value));
         console.log(uvIndex[0].value);
         
         $.ajax({
@@ -141,12 +141,13 @@ function populateCitiesWeather(city, citySearchList) {
      });
 }
 
-$(document).ready(function() {
+// jQuery 
+$(document).ready(function() {         
     var citySearchListString = localStorage.getItem("citySearchList");
 
     var citySearchList = JSON.parse(citySearchListString);
 
-    if citySearchList == null) {
+    if (citySearchList == null) {
         citySearchList = {};
     }
 
@@ -180,9 +181,12 @@ $(document).ready(function() {
                 event.preventDeafualt();
                 var city = $(this).text();
                 
-                
-            })
-    
-})
+                populateCitiesWeather(city, citySearchList);
+
+                $("#currentWeather").show();
+                $("#fiveDayWeather").show();
+            });
+        });
+
 
 

@@ -62,3 +62,6 @@
 * Changed the header to a smaller one in HTML
 * Added some things to javascript to help the weather come up
 * Updated the README.md
+
+### Version 1.13 - 
+* Updated the five day forecast in the style.css to make the spacing even between

@@ -46,6 +46,12 @@ h4 {
     margin: 5px;
 }
 
+#fiveDayForecastCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center/space-evenly;
+}
+
 .forecast {
     margin: 10px;
 }

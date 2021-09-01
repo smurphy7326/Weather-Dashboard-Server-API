@@ -6,14 +6,9 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta hhtp-equiv="X-UA-Compatiable" content="ie=edge">
     <title>Weather Dashboard</title>
-    <!-- Link from Bootstrap when I went to the website and copied the link-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-    <!-- This is the link to Font Awesome that I got when i signed up -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <!-- Regualr link to the stylesheet -->
+    <!-- Links from the excersises-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -25,12 +20,12 @@
     </div>
 </header>
 
-<!-- Bootstrap hwlping me with the placement, looked for grid placement help online to help -->
+<!-- Bootstrap helping me with the placement, looked for grid placement help online to help -->
 <div class="container-fluid">
-    <div class="row">
+    <div class="flex-row">
         <div class="col-md-3">
             <!-- need to work on the style if any -->
-            <div class="card" style="">
+            <div class="card-header">
                 <h5>Search for a Ctiy:</h5>
                 <!-- inline forms from bootstrap helped here-->
                 <form class="form-inline">
@@ -44,6 +39,7 @@
         </div>
             <!-- City List that has been searched for -->
             <ul class="list-group" id="cityListSearch"></ul>
+            <button onclick=""clearHistory()" class="btn"> Clear History</button>
         </div>
     </div>
     <!-- Bootstrap grid helped with the location-->

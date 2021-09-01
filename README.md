@@ -65,3 +65,7 @@
 
 ### Version 1.13 - 
 * Updated the five day forecast in the style.css to make the spacing even between
+* Streamlining the Javascript section
+* Checking to make sure the links in the HTML section are correct
+
+### Version 1.14 - 
